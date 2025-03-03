@@ -12,7 +12,7 @@ function completeTask(taskId, btnId) {
     var completedTasks = document.getElementById("completed-tasks").innerText;
     var remainingTasks = document.getElementById("remaining-tasks").innerText;
     completedTasks = parseInt(completedTasks);
-    remainingTasks  = parseInt(remainingTasks);
+    remainingTasks = parseInt(remainingTasks);
 
     document.getElementById("completed-tasks").innerText = (completedTasks + 1).toString();
     document.getElementById("remaining-tasks").innerText = (remainingTasks - 1).toString();
@@ -30,7 +30,7 @@ function completeTask(taskId, btnId) {
     else if (hh == 0) {
         hh = 12;
     }
-    const currentTime = hh+':'+mm+':'+ss+' '+ampm;
+    const currentTime = hh + ':' + mm + ':' + ss + ' ' + ampm;
     console.log(currentTime);
     activity.textContent = 'You have completed the task ' + task + 'at ' + currentTime;
     document.getElementById("activities").appendChild(activity);
@@ -41,7 +41,7 @@ function completeTask(taskId, btnId) {
     }
 
     document.getElementById(btnId).disabled = true;
-    
+
 }
 
 function clearHistory() {
@@ -49,18 +49,18 @@ function clearHistory() {
 }
 
 function themeChange() {
-    var color = "#"+(Math.floor(Math.random()*0xffffff)).toString(16);
+    var color = "#" + (Math.floor(Math.random() * 0xffffff)).toString(16);
     document.getElementsByTagName("body")[0].style.backgroundColor = color;
 
 }
 
 const date = new Date();
 week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-const day =week[date.getDay()];
-const dd= date.getDate();
-const mm= date.getMonth() + 1;
-const yy= date.getFullYear();
+const day = week[date.getDay()];
+const dd = date.getDate();
+const mm = date.getMonth() + 1;
+const yy = date.getFullYear();
 const dateNum = dd + "/" + mm + "/" + yy;
 console.log(day, dateNum);
-document.getElementById("day").innerText = day+',';
+document.getElementById("day").innerText = day + ',';
 document.getElementById("date").innerText = dateNum;
